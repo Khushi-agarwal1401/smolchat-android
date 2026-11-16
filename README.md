@@ -165,9 +165,13 @@ SMOLCHAT_KEYSTORE=smolchat-release.keystore SMOLCHAT_KEYSTORE_PASS=… BUILD_NUM
 ```bash
 go test ./...                                         # unit tests (db, downloader, router, runtime, markdown UTF-8)
 SMOLCHAT_ONLINE=1 go test ./tests -run CatalogMatchesHub   # verify the catalog against huggingface.co
-SMOLCHAT_TEST_MODEL=SmolLM2-135M-Instruct-Q8_0.gguf go test ./native/llama ./ui -v
+SMOLCHAT_TEST_MODEL=$HOME/models/SmolLM2-135M-Instruct-Q8_0.gguf go test ./native/llama ./ui -v   # absolute path to a GGUF
 SMOLCHAT_SHOTS=/tmp/shots go test ./ui -run Screens   # headless screenshots of every screen
 ```
+
+The model path must be absolute. See
+[CONTRIBUTING](CONTRIBUTING.md#testing) for a download link and what
+passing output looks like.
 
 `ui/screens_test.go` renders every screen off-screen with Gio's headless GPU
 backend. With a test model it also runs a real conversation through the whole

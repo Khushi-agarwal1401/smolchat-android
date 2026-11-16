@@ -124,8 +124,9 @@ in `native/llama.cpp`.
 > **On Windows:** to run the full app, use WSL2 with a Linux setup
 > (`native/build.sh` is a Bash script). The core package and its tests build
 > natively, which is enough for issues in `app/` and `tests/`: install Go and a
-> 64-bit `gcc` (for example [MSYS2](https://www.msys2.org/) MinGW-w64, needed by
-> `go-sqlite3`), then run `go test ./tests`.
+> 64-bit `gcc` on your `PATH` (for example MinGW-w64 from
+> [WinLibs](https://winlibs.com/) or [MSYS2](https://www.msys2.org/), needed
+> by `go-sqlite3`), then run `go test ./tests` with `CGO_ENABLED=1`.
 
 ## Setting up the project
 
@@ -243,11 +244,30 @@ Depending on what you touched, also run:
 SMOLCHAT_ONLINE=1 go test ./tests -run CatalogMatchesHub
 
 # Engine or chat-flow changes: run a real conversation end to end
-SMOLCHAT_TEST_MODEL=SmolLM2-135M-Instruct-Q8_0.gguf go test ./native/llama ./ui -v
+# (needs native/build.sh host and an absolute path to a GGUF model, see below)
+SMOLCHAT_TEST_MODEL=$HOME/models/SmolLM2-135M-Instruct-Q8_0.gguf go test ./native/llama ./ui -v
 
 # UI changes: render every screen headlessly and check the screenshots
 SMOLCHAT_SHOTS=/tmp/shots go test ./ui -run Screens
 ```
+
+**Test model.** `SMOLCHAT_TEST_MODEL` must be an absolute path: `go test`
+runs each package from its own folder, so a bare file name isn't found
+(`model file missing: … no such file or directory`). Any SmolLM or SmolLM2
+GGUF works. To download the small one used above (about 145 MB):
+
+```bash
+mkdir -p ~/models
+curl -L -o ~/models/SmolLM2-135M-Instruct-Q8_0.gguf \
+  https://huggingface.co/bartowski/SmolLM2-135M-Instruct-GGUF/resolve/09816acd5d99df7be770d85ea30822623dab342c/SmolLM2-135M-Instruct-Q8_0.gguf
+```
+
+A model the desktop app already downloaded works too; it lives in the app's
+data folder under `models/`.
+
+`TestGenerate` should **PASS**, not SKIP. Near the end it prints errors like
+`llama_decode: failed to decode, ret = 2`. That's expected: the test cancels a
+long reply to check that stopping works.
 
 ### Adding a model to the catalog
 
