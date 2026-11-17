@@ -18,9 +18,9 @@ import (
 	"gioui.org/layout"
 	"gioui.org/op"
 
-	"github.com/smolworks/smolchat-android/app"
-	"github.com/smolworks/smolchat-android/native/llama"
-	"github.com/smolworks/smolchat-android/ui"
+	"github.com/smollabs/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/native/llama"
+	"github.com/smollabs/smolchat-android/ui"
 )
 
 type initResult struct {

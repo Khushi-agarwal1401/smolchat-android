@@ -3,7 +3,7 @@ package ui
 import (
 	"testing"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 func TestNavigationStack(t *testing.T) {

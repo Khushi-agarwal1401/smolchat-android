@@ -17,7 +17,7 @@ import (
 	"gioui.org/widget"
 	"gioui.org/widget/material"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 // hdrag tracks a horizontal swipe. It listens alongside other handlers
@@ -263,7 +263,7 @@ func (d *Drawer) panel(gtx C, u *UI) D {
 						layout.Flexed(1, func(gtx C) D {
 							return layout.Flex{Axis: layout.Vertical}.Layout(gtx,
 								layout.Rigid(Lbl(th, 17, th.Pal.Text, font.SemiBold, "SmolChat").Layout),
-								layout.Rigid(Lbl(th, 12.5, th.Pal.TextFaint, font.Normal, "by SmolWorks").Layout),
+								layout.Rigid(Lbl(th, 12.5, th.Pal.TextFaint, font.Normal, "by SmolLabs").Layout),
 							)
 						}),
 					)

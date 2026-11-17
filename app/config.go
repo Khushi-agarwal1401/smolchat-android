@@ -12,7 +12,7 @@ import (
 const (
 	AppName    = "SmolChat"
 	AppVersion = "1.0.0"
-	OrgName    = "SmolWorks"
+	OrgName    = "SmolLabs"
 )
 
 // Paths groups the on-device storage locations. Root comes from the platform

@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 // fakeHub serves one file with Range support, optionally dropping the

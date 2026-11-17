@@ -1,4 +1,4 @@
-# SmolWorks brand artwork
+# SmolLabs brand artwork
 
 Master files (not embedded in the app). Everything the app ships is derived
 from these:

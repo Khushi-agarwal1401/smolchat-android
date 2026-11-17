@@ -1,5 +1,5 @@
 // Package assets embeds SmolChat's fonts (SIL OFL 1.1; see the OFL-*.txt
-// files next to them) and SmolWorks brand artwork.
+// files next to them) and SmolLabs brand artwork.
 package assets
 
 import "embed"

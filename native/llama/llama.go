@@ -27,7 +27,7 @@ import (
 	"unicode/utf8"
 	"unsafe"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 var initOnce sync.Once

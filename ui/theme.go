@@ -10,7 +10,7 @@ import (
 	"gioui.org/unit"
 	"gioui.org/widget/material"
 
-	"github.com/smolworks/smolchat-android/assets"
+	"github.com/smollabs/smolchat-android/assets"
 )
 
 // Palette holds the colour tokens of one appearance (light or dark) with one

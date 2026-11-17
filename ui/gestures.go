@@ -10,7 +10,7 @@ import (
 	"gioui.org/op"
 	"gioui.org/op/clip"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 const longPressDelay = 450 * time.Millisecond
