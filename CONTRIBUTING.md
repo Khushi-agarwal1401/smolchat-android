@@ -50,7 +50,7 @@ learning something.
 7. **Run the checks** (`gofmt`, `go vet`, `go test`).
 8. **Commit** using Conventional Commits and **push** to your fork.
 9. **Open a pull request** that links the issue.
-10. **Ensure CI passes and respond to review** until it's approved and merged.
+10. **Respond to review** until it's approved and merged.
 
 Each step is explained below.
 
@@ -329,17 +329,11 @@ Common types: `feat`, `fix`, `docs`, `test`, `refactor`, `perf`, `build`,
 7. Use a **draft pull request** if you'd like early feedback before it's
    finished.
 
-Every pull request automatically triggers the CI workflow (`.github/workflows/ci.yml`),
-which verifies code formatting (`gofmt -l .`), static analysis (`go vet ./...`), and
-runs unit tests (`go test ./...`). All checks must pass before a pull request can be
-merged.
-
 ### Pull request checklist
 
 - [ ] The PR links its issue (`Closes #…`) and the issue was assigned to me
 - [ ] `go test ./...` passes
 - [ ] `gofmt` and `go vet ./...` are clean
-- [ ] Automated CI checks pass
 - [ ] New behaviour has tests
 - [ ] UI changes include screenshots
 - [ ] No new network hosts, permissions, dependencies or telemetry
@@ -347,8 +341,10 @@ merged.
 
 ## Review and merging
 
-* Automated CI checks must pass. If any check fails on your pull request, inspect
-  the GitHub Actions run logs, fix the issue locally, and push the fix to your branch.
+* Automated CI checks should pass before a pull request is merged. If any
+  check fails, inspect the GitHub Actions run logs, fix the issue locally,
+  and push the fix to your branch. First-time contributors' CI runs need a
+  maintainer's approval.
 * A maintainer will review your pull request and may ask for changes. This is
   normal and part of the process, not a sign that something is wrong.
 * Push further commits to the **same branch** to update the pull request.
