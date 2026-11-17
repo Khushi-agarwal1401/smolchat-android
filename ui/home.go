@@ -19,7 +19,7 @@ import (
 	"gioui.org/unit"
 	"gioui.org/widget"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 type screen int

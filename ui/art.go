@@ -14,7 +14,7 @@ import (
 	"gioui.org/op/paint"
 	"gioui.org/unit"
 
-	"github.com/smolworks/smolchat-android/assets"
+	"github.com/smollabs/smolchat-android/assets"
 )
 
 // ---- brand artwork ---------------------------------------------------------

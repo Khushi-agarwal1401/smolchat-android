@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 func spec(t *testing.T, id string) app.ModelSpec {

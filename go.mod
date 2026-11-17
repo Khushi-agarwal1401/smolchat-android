@@ -1,4 +1,4 @@
-module github.com/smolworks/smolchat-android
+module github.com/smollabs/smolchat-android
 
 go 1.26.3
 

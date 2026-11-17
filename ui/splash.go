@@ -236,7 +236,7 @@ func (s *Splash) Layout(gtx C, th *Theme, status string) bool {
 	}()
 
 	// Tagline.
-	textAt(gtx, th, "by SmolWorks  ·  private AI that lives on your phone", 13, rgb(0x8f8c9c), font.Normal,
+	textAt(gtx, th, "by SmolLabs  ·  private AI that lives on your phone", 13, rgb(0x8f8c9c), font.Normal,
 		stageW, dp(292), float32(outCubic((ms-1250)/450)))
 
 	// Shimmer line + status.

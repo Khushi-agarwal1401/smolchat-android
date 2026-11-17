@@ -15,8 +15,8 @@ import (
 	"gioui.org/op"
 	"gioui.org/unit"
 
-	"github.com/smolworks/smolchat-android/app"
-	"github.com/smolworks/smolchat-android/native/llama"
+	"github.com/smollabs/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/native/llama"
 )
 
 // TestScreens renders every screen headlessly at phone resolution, which

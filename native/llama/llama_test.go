@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/smolworks/smolchat-android/app"
+	"github.com/smollabs/smolchat-android/app"
 )
 
 func TestValidPrefix(t *testing.T) {
